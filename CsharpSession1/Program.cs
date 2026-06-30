@@ -34,6 +34,40 @@
             Console.WriteLine("Reminder result: " + reminderResult);
             Console.WriteLine("Comparison result: " + comparisonResult);
             Console.WriteLine("Test result: " + testResult);
+            /* and: &&
+             * Or: || 
+             * not: ! */
+
+            //if statement 
+
+            Console.WriteLine("Enter your degree: ");
+            float degree = float.Parse(Console.ReadLine());
+
+            if (degree >= 0 && degree < 50)
+            {
+                Console.WriteLine("You failed");
+            }
+            else if (degree >= 50 && degree < 60)
+            {
+                Console.WriteLine("You passed with Grade: D");
+            }
+            else if (degree >= 60 && degree < 70)
+            {
+                Console.WriteLine("You passed with Grade: C");
+            }
+            else if (degree >= 70 && degree < 80)
+            {
+                Console.WriteLine("You passed with Grade: B");
+            }
+            else if (degree >= 80 && degree <= 100)
+            {
+                Console.WriteLine("You passed with Grade: A");
+            }
+            else
+            {
+                Console.WriteLine("You entered a wrong number");
+            }
+
 
         }
     }
