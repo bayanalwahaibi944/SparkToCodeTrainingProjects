@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("Please Enter Your Name: ");
+            string userName = Console.ReadLine();
+
+            Console.Write("Please Enter Your Age: ");
+            int userAge = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please Enter Your Salary: ");
+            float userSalary = float.Parse(Console.ReadLine());
+
         }
     }
 }
