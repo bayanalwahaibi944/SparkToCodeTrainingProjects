@@ -67,6 +67,35 @@
             {
                 Console.WriteLine("You entered a wrong number");
             }
+            //Switch-case Statement 
+
+            Console.WriteLine("Welcome to Bank menu:");
+            Console.WriteLine("1. Deposite");
+            Console.WriteLine("2. Withdraw");
+            Console.WriteLine("3. Balance check");
+
+            Console.WriteLine("Please choose an option: ");
+            int option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Console.WriteLine("Deposited");
+                    break;
+
+                case 2:
+                    Console.WriteLine("Withdrawed");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Your balance = ");
+                    break;
+
+                default:
+                    Console.WriteLine("Please choose a correct option");
+                    break;
+            }
+
 
 
         }
