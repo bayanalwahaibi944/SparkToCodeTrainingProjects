@@ -84,8 +84,28 @@
                     break;
             }
 
+            //Medium-task6 
 
+            Console.Write("Enter temperature in Celsius: ");
+            double celsius = double.Parse(Console.ReadLine());
 
+            double fahrenheit = (celsius * 9 / 5) + 32;
+
+            if (celsius < 10)
+            {
+                Console.WriteLine("Cold");
             }
+            else if (celsius <= 30)
+            {
+                Console.WriteLine("Mild");
+            }
+            else
+            {
+                Console.WriteLine("Hot");
+            }
+
+
+
+        }
     }
 }
