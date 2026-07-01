@@ -149,6 +149,37 @@
             Console.WriteLine("Discount Amount: ", discount);
             Console.WriteLine("Final Amount:  ", finalAmount);
 
+            //  Medium-task9 
+            Console.Write("Enter a number from 1 to 7: ");
+            int dayNum = int.Parse(Console.ReadLine());
+            switch (dayNum)
+            {
+                case 1:
+                    Console.WriteLine("Sunday");
+                    break;
+                case 2:
+                    Console.WriteLine("Monday");
+                    break;
+                case 3:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 5:
+                    Console.WriteLine("Thersday");
+                    break;
+                case 6:
+                    Console.WriteLine("Friday");
+                    break;
+                case 7:
+                    Console.WriteLine("Saturday");
+                    break;
+                default:
+                    Console.WriteLine("Invalid day number");
+                    break;
+            }
+
 
         }
     }
