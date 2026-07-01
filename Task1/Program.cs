@@ -146,9 +146,9 @@
 
             double finalAmount = bill - discount;
 
-            Console.WriteLine("Original Bill: "+bill);
-            Console.WriteLine("Discount Amount: "+discount);
-            Console.WriteLine("Final Amount:  "+ finalAmount);
+            Console.WriteLine("Original Bill: " + bill);
+            Console.WriteLine("Discount Amount: " + discount);
+            Console.WriteLine("Final Amount:  " + finalAmount);
 
             //  Medium-task9 
             Console.Write("Enter a number from 1 to 7: ");
@@ -365,8 +365,8 @@
                 }
             }
             //Advanced-task14 
-             Console.WriteLine("enter product code 1,2,3 : ");
-            int proCode= int.Parse(Console.ReadLine());
+            Console.WriteLine("enter product code 1,2,3 : ");
+            int proCode = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter quantity: ");
             int quantity = int.Parse(Console.ReadLine());
@@ -378,44 +378,115 @@
             string proName = "";
             double unitPrice = 0;
             bool validPro = true;
-            switch (proCode) {
+            switch (proCode)
+            {
                 case 1:
                     proName = "Heasphones";
                     unitPrice = 8.5;
-                     
+
                     break;
-                    case 2:
+                case 2:
                     proName = "Keyboard";
                     unitPrice = 12;
-                    break; 
-                    case 3:
+                    break;
+                case 3:
                     proName = "Mouse";
                     unitPrice = 5;
                     break;
-                    default: 
+                default:
                     Console.WriteLine("Invalid product code");
                     break;
             }
-            if(validPro)
+            if (validPro)
             {
                 double subtotal = unitPrice * quantity;
                 double discAmount = 0;
-                if(hasCoupon && subtotal > 20)
+                if (hasCoupon && subtotal > 20)
                 {
-                    discAmount = subtotal * 0.10 ;
+                    discAmount = subtotal * 0.10;
                 }
                 double afterdis = subtotal - discAmount;
                 double tax = afterdis * 0.05;
                 double finalTotal = afterdis + tax;
                 Console.WriteLine("Product: " + proName);
-                Console.WriteLine("Subtotal:"+ subtotal);
-                Console.WriteLine("Discount Amount:"+discAmount);
-                Console.WriteLine("Tax Amount: "+ tax);
-                Console.WriteLine("Final Total:"+ finalTotal);
+                Console.WriteLine("Subtotal:" + subtotal);
+                Console.WriteLine("Discount Amount:" + discAmount);
+                Console.WriteLine("Tax Amount: " + tax);
+                Console.WriteLine("Final Total:" + finalTotal);
 
             }
+            //Advanced-task15 
+            Console.Write("Enter program type S for Science or A for Arts: ");
+            char programType = char.Parse(Console.ReadLine());
 
+            Console.Write("Enter GPA out of 4.0: ");
+            double gpa = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter entrance exam score out of 100: ");
+            int examScore = int.Parse(Console.ReadLine());
+
+            Console.Write("Do you have an extracurricular achievement? yes/no: ");
+            string achievement = Console.ReadLine();
+            bool hasAchievement = achievement == "yes";
+            string pName = "";
+            string result1 = "";
+            bool vProgram = true;
+            switch (programType)
+            {
+                case 'S':
+                    pName = "Science";
+
+                    if (gpa >= 3.0 && examScore >= 75)
+                    {
+                        result1 = "Admitted";
+                    }
+                    else
+                    {
+                        if (hasAchievement)
+                        {
+                            result1 = "Conditionally Admitted";
+                        }
+                        else
+                        {
+                            result1 = "Not Admitted";
+                        }
+                    }
+                    break;
+                case 'A':
+                    pName = "Arts";
+
+                    if (gpa >= 2.5 && examScore >= 60)
+                    {
+                        result1 = "Admitted";
+                    }
+                    else
+                    {
+                        if (hasAchievement)
+                        {
+                            result1 = "Conditionally Admitted";
+                        }
+                        else
+                        {
+                            result1 = "Not Admitted";
+                        }
+                    }
+                    break;
+                default:
+                    vProgram = false;
+                    Console.WriteLine("Invalid program type");
+                    break;
+            }
+
+            if (vProgram)
+            {
+                Console.WriteLine("Program Type: " + pName);
+                Console.WriteLine("Final Result: " + result1);
+            }
+            
+        
+
+        }
 
         }
     }
-}
+
