@@ -24,7 +24,7 @@
             double width = double.Parse(Console.ReadLine());
 
             double area = length * width;
-            double perimeter = 2 * (length +  width);
+            double perimeter = 2 * (length + width);
 
             Console.WriteLine("Area : " + area);
             Console.WriteLine("Perimeter : " + perimeter);
@@ -52,7 +52,8 @@
             if (age1 >= 18 && hasid)
             {
                 Console.WriteLine("Eligible to vote");
-            }else
+            }
+            else
             {
                 Console.WriteLine("Not eligible to vote");
             }
@@ -189,7 +190,8 @@
 
             Console.Write("Enter operator +, -, *, /,%: ");
             char op = char.Parse(Console.ReadLine());
-            switch (op) {
+            switch (op)
+            {
                 case '+':
                     Console.WriteLine("Result: " + (num1 + num2));
                     break;
@@ -218,7 +220,7 @@
                     {
                         Console.WriteLine("Cannot divide by zero");
                     }
-             
+
                     break;
                 default:
                     Console.WriteLine("Invalid operator");
@@ -226,35 +228,38 @@
             }
             //Hard-task11 
             Console.WriteLine("Enter your age: ");
-               int age4= int.Parse(Console.ReadLine());
+            int age4 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter your monthly income: ");
             double income = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Do you have an existing loan? yes/no: ");
-            string loan= Console.ReadLine();
+            string loan = Console.ReadLine();
             bool hasLoan = loan == "yes";
 
-            if(age4 >= 21 && age4 <= 60 && income >= 400 && !hasLoan) {
-                Console.WriteLine("Eligible for loan"); 
-                }else
+            if (age4 >= 21 && age4 <= 60 && income >= 400 && !hasLoan)
+            {
+                Console.WriteLine("Eligible for loan");
+            }
+            else
             {
                 Console.WriteLine("Not eligible for loan");
             }
-            if (age4 < 21 || age4 > 60) {
+            if (age4 < 21 || age4 > 60)
+            {
                 Console.WriteLine("Reason: age out of range");
             }
-            if(income < 400)
+            if (income < 400)
             {
                 Console.WriteLine("Reason: income too low");
             }
-            if (hasLoan) 
+            if (hasLoan)
             {
                 Console.WriteLine("Reason: has an existing loan");
             }
             //Hard-task12 
             Console.WriteLine("Enter region code A,B,C: ");
-            char region= char.Parse(Console.ReadLine());
+            char region = char.Parse(Console.ReadLine());
 
             Console.Write("Enter package weight in kg: ");
             double weight = double.Parse(Console.ReadLine());
@@ -265,18 +270,20 @@
             switch (region)
             {
                 case 'A':
-                    baseCost = 3; 
+                    baseCost = 3;
                     if (weight > 5)
                     {
                         extraCharge = 2;
-                    }else if (weight > 10)
+                    }
+                    else if (weight > 10)
                     {
                         extraCharge = 5;
-                    }else
+                    }
+                    else
                     {
                         extraCharge = 0;
                     }
-                    totalCost=baseCost + extraCharge;
+                    totalCost = baseCost + extraCharge;
                     Console.WriteLine("Base Cost :" + baseCost);
                     Console.WriteLine("Extra Charge :" + extraCharge);
                     Console.WriteLine("Total Cost :" + totalCost);
@@ -321,10 +328,42 @@
                     break;
 
             }
+            //Hard-task13 
+            Console.WriteLine("Enter side 1 : ");
+            double side1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter side 2 : ");
+            double side2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter side 3 : ");
+            double side3 = double.Parse(Console.ReadLine());
+
+            if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1)
+            {
+                if (side1 == side2 && side2 == side3)
+                {
+                    Console.WriteLine("Valid triangle");
+                    Console.WriteLine("Type: Equilateral");
+                }
+                else
+                {
+                    if (side1 == side2 || side1 == side3 || side2 == side3)
+                    {
+                        Console.WriteLine("Valid triangle");
+                        Console.WriteLine("Type: Isosceles");
+                    }
+                    else
+                    {
+                        Console.WriteLine("The sides do not form a valid triangle");
+                    }
 
 
 
 
+
+
+                }
+            }
         }
     }
 }
