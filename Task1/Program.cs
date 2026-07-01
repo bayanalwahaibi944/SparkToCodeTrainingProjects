@@ -49,7 +49,7 @@
             Console.WriteLine("Do you have a valid national ID? yes/no ");
             string id = Console.ReadLine();
             bool hasid = id == "yes";
-            if (age >= 18 && hasid)
+            if (age1 >= 18 && hasid)
             {
                 Console.WriteLine("Eligible to vote");
             }else
@@ -57,16 +57,35 @@
                 Console.WriteLine("Not eligible to vote");
             }
 
+            //Easy-task 5 
+
+            Console.Write("Enter grade letter A, B, C, D, or F: ");
+            char grade = char.Parse(Console.ReadLine());
+
+            switch (grade)
+            {
+                case 'A':
+                    Console.WriteLine("Excellent");
+                    break;
+                case 'B':
+                    Console.WriteLine("Very Good");
+                    break;
+                case 'C':
+                    Console.WriteLine("Good");
+                    break;
+                case 'D':
+                    Console.WriteLine("Pass");
+                    break;
+                case 'F':
+                    Console.WriteLine("Fail");
+                    break;
+                default:
+                    Console.WriteLine("Invalid grade");
+                    break;
+            }
 
 
 
-
-
-
-
-
-
-
-        }
+            }
     }
 }
