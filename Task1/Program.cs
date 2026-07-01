@@ -15,6 +15,23 @@
             Console.WriteLine("Height : " + height);
             Console.WriteLine("Student : " + student);
 
+            //Easy-task 2 
+
+            Console.WriteLine("Enter rectangle length : ");
+            double length = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter rectangle width : ");
+            double width = double.Parse(Console.ReadLine());
+
+            double area = length * width;
+            double perimeter = 2 * (length +  width);
+
+            Console.WriteLine("Area : " + area);
+            Console.WriteLine("Perimeter : " + perimeter);
+
+
+
+
 
 
 
