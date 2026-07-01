@@ -42,6 +42,21 @@
             {
                 Console.WriteLine("The number is odd ");
             }
+            //Easy-task 4  
+            Console.WriteLine("Enter your age: ");
+            int age1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Do you have a valid national ID? yes/no ");
+            string id = Console.ReadLine();
+            bool hasid = id == "yes";
+            if (age >= 18 && hasid)
+            {
+                Console.WriteLine("Eligible to vote");
+            }else
+            {
+                Console.WriteLine("Not eligible to vote");
+            }
+
 
 
 
