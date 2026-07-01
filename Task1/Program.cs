@@ -146,9 +146,9 @@
 
             double finalAmount = bill - discount;
 
-            Console.WriteLine("Original Bill: ", bill);
-            Console.WriteLine("Discount Amount: ", discount);
-            Console.WriteLine("Final Amount:  ", finalAmount);
+            Console.WriteLine("Original Bill: "+bill);
+            Console.WriteLine("Discount Amount: "+discount);
+            Console.WriteLine("Final Amount:  "+ finalAmount);
 
             //  Medium-task9 
             Console.Write("Enter a number from 1 to 7: ");
@@ -364,6 +364,58 @@
 
                 }
             }
+            //Advanced-task14 
+             Console.WriteLine("enter product code 1,2,3 : ");
+            int proCode= int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter quantity: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            Console.Write("Do you have a discount coupon? yes/no: ");
+            string coupon = Console.ReadLine();
+
+            bool hasCoupon = coupon == "yes";
+            string proName = "";
+            double unitPrice = 0;
+            bool validPro = true;
+            switch (proCode) {
+                case 1:
+                    proName = "Heasphones";
+                    unitPrice = 8.5;
+                     
+                    break;
+                    case 2:
+                    proName = "Keyboard";
+                    unitPrice = 12;
+                    break; 
+                    case 3:
+                    proName = "Mouse";
+                    unitPrice = 5;
+                    break;
+                    default: 
+                    Console.WriteLine("Invalid product code");
+                    break;
+            }
+            if(validPro)
+            {
+                double subtotal = unitPrice * quantity;
+                double discAmount = 0;
+                if(hasCoupon && subtotal > 20)
+                {
+                    discAmount = subtotal * 0.10 ;
+                }
+                double afterdis = subtotal - discAmount;
+                double tax = afterdis * 0.05;
+                double finalTotal = afterdis + tax;
+                Console.WriteLine("Product: " + proName);
+                Console.WriteLine("Subtotal:"+ subtotal);
+                Console.WriteLine("Discount Amount:"+discAmount);
+                Console.WriteLine("Tax Amount: "+ tax);
+                Console.WriteLine("Final Total:"+ finalTotal);
+
+            }
+
+
         }
     }
 }
