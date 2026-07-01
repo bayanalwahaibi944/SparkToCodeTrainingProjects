@@ -223,10 +223,37 @@
                 default:
                     Console.WriteLine("Invalid operator");
                     break;
-
-            
-            
             }
+            //Hard-task11 
+            Console.WriteLine("Enter your age: ");
+               int age4= int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter your monthly income: ");
+            double income = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Do you have an existing loan? yes/no: ");
+            string loan= Console.ReadLine();
+            bool hasLoan = loan == "yes";
+
+            if(age4 >= 21 && age4 <= 60 && income >= 400 && !hasLoan) {
+                Console.WriteLine("Eligible for loan"); 
+                }else
+            {
+                Console.WriteLine("Not eligible for loan");
+            }
+            if (age4 < 21 || age4 > 60) {
+                Console.WriteLine("Reason: age out of range");
+            }
+            if(income < 400)
+            {
+                Console.WriteLine("Reason: income too low");
+            }
+            if (hasLoan) 
+            {
+                Console.WriteLine("Reason: has an existing loan");
+            }
+
+
 
         }
     }
