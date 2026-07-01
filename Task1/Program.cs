@@ -252,6 +252,76 @@
             {
                 Console.WriteLine("Reason: has an existing loan");
             }
+            //Hard-task12 
+            Console.WriteLine("Enter region code A,B,C: ");
+            char region= char.Parse(Console.ReadLine());
+
+            Console.Write("Enter package weight in kg: ");
+            double weight = double.Parse(Console.ReadLine());
+
+            double baseCost = 0;
+            double extraCharge = 0;
+            double totalCost = 0;
+            switch (region)
+            {
+                case 'A':
+                    baseCost = 3; 
+                    if (weight > 5)
+                    {
+                        extraCharge = 2;
+                    }else if (weight > 10)
+                    {
+                        extraCharge = 5;
+                    }else
+                    {
+                        extraCharge = 0;
+                    }
+                    totalCost=baseCost + extraCharge;
+                    Console.WriteLine("Base Cost :" + baseCost);
+                    Console.WriteLine("Extra Charge :" + extraCharge);
+                    Console.WriteLine("Total Cost :" + totalCost);
+                    break;
+                case 'B':
+                    baseCost = 1;
+                    if (weight > 5)
+                    {
+                        extraCharge = 2;
+                    }
+                    else if (weight > 10)
+                    {
+                        extraCharge = 5;
+                    }
+                    else
+                    {
+                        extraCharge = 0;
+                    }
+                    totalCost = baseCost + extraCharge;
+                    Console.WriteLine("Base Cost :" + baseCost);
+                    Console.WriteLine("Extra Charge :" + extraCharge);
+                    Console.WriteLine("Total Cost :" + totalCost);
+                    break;
+                case 'C':
+                    baseCost = 7;
+                    if (weight > 5)
+                    {
+                        extraCharge = 2;
+                    }
+                    else if (weight > 10)
+                    {
+                        extraCharge = 5;
+                    }
+                    else
+                    {
+                        extraCharge = 0;
+                    }
+                    totalCost = baseCost + extraCharge;
+                    Console.WriteLine("Base Cost :" + baseCost);
+                    Console.WriteLine("Extra Charge :" + extraCharge);
+                    Console.WriteLine("Total Cost :" + totalCost);
+                    break;
+
+            }
+
 
 
 
