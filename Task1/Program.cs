@@ -104,7 +104,7 @@
                 Console.WriteLine("Hot");
             }
 
-            //Medium-task6
+            //Medium-task7
 
             Console.Write("Enter your age: ");
             int age2 = int.Parse(Console.ReadLine());
@@ -127,7 +127,27 @@
             {
                 Console.WriteLine("Invalid age");
             }
+            //Medium-task8 
 
+            Console.Write("Enter total bill amount: ");
+            double bill = double.Parse(Console.ReadLine());
+
+            Console.Write("Are you a loyalty member? yes/no: ");
+            string member = Console.ReadLine();
+            bool isMember = member == "yes";
+
+            double discount = 0;
+
+            if (bill > 20 && isMember)
+            {
+                discount = bill * 0.15;
+            }
+
+            double finalAmount = bill - discount;
+
+            Console.WriteLine("Original Bill: ", bill);
+            Console.WriteLine("Discount Amount: ", discount);
+            Console.WriteLine("Final Amount:  ", finalAmount);
 
 
         }
