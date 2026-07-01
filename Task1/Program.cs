@@ -104,6 +104,30 @@
                 Console.WriteLine("Hot");
             }
 
+            //Medium-task6
+
+            Console.Write("Enter your age: ");
+            int age2 = int.Parse(Console.ReadLine());
+            if (age2 >= 0 && age <= 12)
+            {
+                Console.WriteLine("Category: Child");
+                Console.WriteLine("Price:2.000 OMR");
+            }
+            else if (age2 >= 13 && age2 <= 59)
+            {
+                Console.WriteLine("Category: Adult");
+                Console.WriteLine("Price:5.000 OMR");
+            }
+            else if (age2 >= 60)
+            {
+                Console.WriteLine("Category: Senior");
+                Console.WriteLine("Price:3.000 OMR");
+            }
+            else
+            {
+                Console.WriteLine("Invalid age");
+            }
+
 
 
         }
