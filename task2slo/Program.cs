@@ -100,6 +100,48 @@
             {
                 Console.WriteLine("Error: Please enter valid numbers.");
             }
+            //medium-task7 
+
+            int choice = 0;
+
+            while (choice != 3)
+            {
+                Console.WriteLine("Menu");
+                Console.WriteLine("1) Say Hello");
+                Console.WriteLine("2) Show Current Time-of-day Greeting");
+                Console.WriteLine("3) Exit");
+                Console.Write("Enter your choice: ");
+
+                try
+                {
+                    choice = int.Parse(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("Hello!");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Good day! Hope you are having a great time.");
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Exiting program...");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice. Please choose 1, 2, or 3.");
+                            break;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error: Please enter a numeric value.");
+                }
+
+                Console.WriteLine();
+            }
 
         }
     }
