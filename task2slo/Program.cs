@@ -142,6 +142,22 @@
 
                 Console.WriteLine();
             }
+            //Medium-task8 
+            Console.Write("Enter a positive number N: ");
+            int n1 = int.Parse(Console.ReadLine());
+
+            int total1 = 0;
+
+            for (int i = 1; i <= n1; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    total = total + i;
+                }
+            }
+
+            Console.WriteLine("Sum of even numbers = " + total1);
+
 
         }
     }
