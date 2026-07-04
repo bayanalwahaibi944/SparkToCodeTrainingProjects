@@ -50,6 +50,34 @@
             }
 
             Console.WriteLine("Access Granted");
+
+            //medium-task5 
+            int secNumber = 42;
+            int guess;
+            int attempts = 0;
+
+            do
+            {
+                Console.Write("Guess the number: ");
+                guess = int.Parse(Console.ReadLine());
+                attempts++;
+
+                if (guess > secNumber)
+                {
+                    Console.WriteLine("Too high");
+                }
+                else if (guess < secNumber)
+                {
+                    Console.WriteLine("Too low");
+                }
+                else
+                {
+                    Console.WriteLine("Correct!");
+                }
+
+            } while (guess != secNumber);
+
+            Console.WriteLine("Attempts: " + attempts);
         }
     }
        
