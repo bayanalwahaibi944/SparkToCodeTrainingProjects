@@ -78,6 +78,29 @@
             } while (guess != secNumber);
 
             Console.WriteLine("Attempts: " + attempts);
+
+            //medium-task6 
+            try
+            {
+                Console.Write("Enter the first number: ");
+                int number1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter the second number: ");
+                int number2 = int.Parse(Console.ReadLine());
+
+                int result = number1 / number2;
+
+                Console.WriteLine("Result = " + result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Error: You cannot divide by zero.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error: Please enter valid numbers.");
+            }
+
         }
     }
        
