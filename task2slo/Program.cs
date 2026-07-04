@@ -157,6 +157,44 @@
             }
 
             Console.WriteLine("Sum of even numbers = " + total1);
+            //Hard-task9
+
+            int number1 = 0;
+            bool valid = false;
+
+            do
+            {
+                try
+                {
+                    Console.Write("Enter a positive whole number: ");
+                    number1 = int.Parse(Console.ReadLine());
+
+                    if (number1 <= 0)
+                    {
+                        Console.WriteLine("Error: Number must be positive");
+                        valid = false;
+                    }
+                    else
+                    {
+                        valid = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error: Please enter a valid whole number");
+                    valid = false;
+                }
+
+            } while (valid == false);
+
+            int total2 = 0;
+
+            for (int i = 1; i <= number1; i++)
+            {
+                total2 = total2 + i;
+            }
+
+            Console.WriteLine("Sum = " + total2);
 
 
         }
