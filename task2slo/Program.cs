@@ -195,10 +195,134 @@
             }
 
             Console.WriteLine("Sum = " + total2);
+            //Advanced-task10 
+
+            int correctPin = 1234;
+            int enteredPin = 0;
+            int attempts1 = 0;
+            bool pinCorrect = false;
+
+            while (attempts1 < 3 && pinCorrect == false)
+            {
+                try
+                {
+                    Console.Write("Enter PIN: ");
+                    enteredPin = int.Parse(Console.ReadLine());
+
+                    if (enteredPin == correctPin)
+                    {
+                        pinCorrect = true;
+                    }
+                    else
+                    {
+                        attempts1++;
+                        Console.WriteLine("Wrong PIN");
+                    }
+                }
+                catch (Exception)
+                {
+                    attempts1++;
+                    Console.WriteLine("Wrong PIN");
+                }
+            }
+
+            if (pinCorrect == false)
+            {
+                Console.WriteLine("Card Blocked");
+            }
+            else
+            {
+                decimal balance = 100.000m;
+                int choice1 = 0;
+
+                while (choice != 4)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("ATM Menu");
+                    Console.WriteLine("1) Deposit");
+                    Console.WriteLine("2) Withdraw");
+                    Console.WriteLine("3) Check Balance");
+                    Console.WriteLine("4) Exit");
+                    Console.Write("Enter your choice: ");
+
+                    try
+                    {
+                        choice1 = int.Parse(Console.ReadLine());
+
+                        switch (choice1)
+                        {
+                            case 1:
+                                try
+                                {
+                                    Console.Write("Enter deposit amount: ");
+                                    int deposit = int.Parse(Console.ReadLine());
+
+                                    if (deposit < 0)
+                                    {
+                                        Console.WriteLine("Amount cannot be negative.");
+                                    }
+                                    else
+                                    {
+                                        balance = balance + deposit;
+                                        Console.WriteLine("Deposit successful.");
+                                        Console.WriteLine("Balance = " + balance + " OMR");
+                                    }
+                                }
+                                catch (Exception)
+                                {
+                                    Console.WriteLine("Invalid amount.");
+                                }
+                                break;
+
+                            case 2:
+                                try
+                                {
+                                    Console.Write("Enter withdrawal amount: ");
+                                    int withdraw = int.Parse(Console.ReadLine());
+
+                                    if (withdraw < 0)
+                                    {
+                                        Console.WriteLine("Amount cannot be negative.");
+                                    }
+                                    else if (withdraw > balance)
+                                    {
+                                        Console.WriteLine("Insufficient balance.");
+                                    }
+                                    else
+                                    {
+                                        balance = balance - withdraw;
+                                        Console.WriteLine("Withdrawal successful.");
+                                        Console.WriteLine("Balance = " + balance + " OMR");
+                                    }
+                                }
+                                catch (Exception)
+                                {
+                                    Console.WriteLine("Invalid amount.");
+                                }
+                                break;
+
+                            case 3:
+                                Console.WriteLine("Balance = " + balance + " OMR");
+                                break;
+
+                            case 4:
+                                Console.WriteLine("Thank you. Goodbye!");
+                                break;
+
+                            default:
+                                Console.WriteLine("Invalid choice.");
+                                break;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Error: Please enter a numeric menu choice.");
+                    }
 
 
-        }
-    }
+
+                }
+            }
        
       
     
