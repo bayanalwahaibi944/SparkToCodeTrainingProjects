@@ -36,6 +36,20 @@
             {
                 Console.WriteLine(number + " x " + i + " = " + (number * i));
             }
+            //easy-task4 
+            string correctPW = "Spark2026";
+
+            Console.Write("Enter password: ");
+            string password = Console.ReadLine();
+
+            while (password != correctPW)
+            {
+                Console.WriteLine("Incorrect password, try again");
+                Console.Write("Enter password: ");
+                password = Console.ReadLine();
+            }
+
+            Console.WriteLine("Access Granted");
         }
     }
        
