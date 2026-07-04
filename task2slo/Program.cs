@@ -14,7 +14,23 @@
             }
 
             Console.WriteLine("Liftoff!");
+            
+            //easy-task2 
+            Console.Write("Enter a positive number N: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int total = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                total = total + i;
+            }
+
+            Console.WriteLine("Sum = " + total);
+
         }
-    
     }
+       
+      
+    
 }
