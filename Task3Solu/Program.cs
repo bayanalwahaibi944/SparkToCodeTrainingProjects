@@ -38,7 +38,22 @@
             DateTime endDate = today.AddDays(days);
 
             Console.WriteLine("Trial end date: " + endDate.ToString("yyyy-MM-dd"));
+            //Medium-task5 
+            Console.Write("Enter raw exam score: ");
+            double score = double.Parse(Console.ReadLine());
 
+            double roundedScore = Math.Round(score, 0);
+
+            Console.WriteLine("Rounded score: " + roundedScore);
+
+            if (roundedScore >= 60)
+            {
+                Console.WriteLine("Result: Pass");
+            }
+            else
+            {
+                Console.WriteLine("Result: Fail");
+            }
 
         }
     }
