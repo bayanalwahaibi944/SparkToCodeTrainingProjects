@@ -96,7 +96,33 @@
             {
                 Console.WriteLine("No Match");
             }
+            //Medium-task8 
+            try
+            {
+                Console.Write("Enter membership start date, example 2026-01-10: ");
+                string startText = Console.ReadLine();
 
+                Console.Write("Enter number of valid membership days: ");
+                int days1 = int.Parse(Console.ReadLine());
+
+                DateTime startDate = DateTime.Parse(startText);
+                DateTime expiryDate = startDate.AddDays(days1);
+
+                Console.WriteLine("Expiry date: " + expiryDate.ToString("yyyy-MM-dd"));
+
+                if (expiryDate >= DateTime.Today)
+                {
+                    Console.WriteLine("Status: Active");
+                }
+                else
+                {
+                    Console.WriteLine("Status: Expired");
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Invalid input, Please enter the date correctly");
+            }
 
         }
     }
