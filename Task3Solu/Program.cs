@@ -30,6 +30,14 @@
             Console.WriteLine("Uppercase: " + name.ToUpper());
             Console.WriteLine("Lowercase: " + name.ToLower());
             Console.WriteLine("Number of characters: " + name.Length);
+            //Easy-task4
+            Console.Write("Enter number of free trial days: ");
+            int days = int.Parse(Console.ReadLine());
+
+            DateTime today = DateTime.Today;
+            DateTime endDate = today.AddDays(days);
+
+            Console.WriteLine("Trial end date: " + endDate.ToString("yyyy-MM-dd"));
 
 
         }
