@@ -54,6 +54,30 @@
             {
                 Console.WriteLine("Result: Fail");
             }
+            //Medium-task6 
+            Console.Write("Enter password: ");
+            string password = Console.ReadLine();
+
+            string lowerPassword = password.ToLower();
+
+            if (password.Length >= 8 && !lowerPassword.Contains("password"))
+            {
+                Console.WriteLine("Strong");
+            }
+            else
+            {
+                Console.WriteLine("Weak");
+
+                if (password.Length < 8)
+                {
+                    Console.WriteLine("Reason: Password must be at least 8 characters.");
+                }
+
+                if (lowerPassword.Contains("password"))
+                {
+                    Console.WriteLine("Reason: Password must not contain the word password.");
+                }
+            }
 
         }
     }
