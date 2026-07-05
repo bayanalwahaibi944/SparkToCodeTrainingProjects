@@ -23,6 +23,13 @@
 
             Console.WriteLine("Square: " + s);
             Console.WriteLine("Square root: " + sR);
+            //Easy-task3
+            Console.Write("Enter your full name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Uppercase: " + name.ToUpper());
+            Console.WriteLine("Lowercase: " + name.ToLower());
+            Console.WriteLine("Number of characters: " + name.Length);
 
 
         }
