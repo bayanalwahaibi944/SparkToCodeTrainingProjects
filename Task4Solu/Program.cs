@@ -13,6 +13,11 @@
         {
             return number * number;
         }
+        //Easy-task3 
+        public static double CelsiusToFahrenheit(double c)
+        {
+            return (c * 9 / 5) + 32;
+        }
 
         static void Main()
         {
@@ -31,6 +36,15 @@
             int sResult = Square(task2Num);
 
             Console.WriteLine("Square = " + sResult);
+            //Easy-task3 
+            Console.Write("Enter temperature in Celsius: ");
+            double c= Convert.ToDouble(Console.ReadLine());
+
+            double f = CelsiusToFahrenheit(c);
+
+            Console.WriteLine("Temperature in Fahrenheit = " + f);
+
+
         }
     }
 }
