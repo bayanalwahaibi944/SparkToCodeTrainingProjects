@@ -8,6 +8,12 @@
             Console.WriteLine("Welcome, " + name + "!");
         }
 
+        //Easy-task2 
+        public static int Square(int number)
+        {
+            return number * number;
+        }
+
         static void Main()
         {
             //Easy-task1 
@@ -17,6 +23,14 @@
             PrintWelcome(task1Name);
 
             Console.WriteLine();
+            //Easy-task2 
+
+            Console.Write("Enter a number: ");
+            int task2Num = Convert.ToInt32(Console.ReadLine());
+
+            int sResult = Square(task2Num);
+
+            Console.WriteLine("Square = " + sResult);
         }
     }
 }
