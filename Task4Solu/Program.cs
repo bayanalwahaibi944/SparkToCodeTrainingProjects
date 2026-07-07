@@ -2,9 +2,21 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        //Easy-task1 
+        public static void PrintWelcome(string name)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Welcome, " + name + "!");
+        }
+
+        static void Main()
+        {
+            //Easy-task1 
+            Console.Write("Enter your name: ");
+            string task1Name = Console.ReadLine();
+
+            PrintWelcome(task1Name);
+
+            Console.WriteLine();
         }
     }
 }
