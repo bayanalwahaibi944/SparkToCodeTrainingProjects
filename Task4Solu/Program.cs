@@ -30,6 +30,16 @@
         {
             return number % 2 == 0;
         }
+        //Medium-task6 
+        public static double CalculateArea(double length, double width)
+        {
+            return length * width;
+        }
+
+        public static double CalculatePerimeter(double length, double width)
+        {
+            return 2 * (length + width);
+        }
 
         static void Main()
         {
@@ -72,6 +82,19 @@
             {
                 Console.WriteLine("Odd");
             }
+            //Medium-task6 
+            Console.Write("Enter rectangle length: ");
+            double length = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter rectangle width: ");
+            double width = Convert.ToDouble(Console.ReadLine());
+
+            double area = CalculateArea(length, width);
+            double perimeter = CalculatePerimeter(length, width);
+
+            Console.WriteLine("Area = " + area);
+            Console.WriteLine("Perimeter = " + perimeter);
+
 
 
         }
