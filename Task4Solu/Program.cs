@@ -25,6 +25,11 @@
             Console.WriteLine("2) Help");
             Console.WriteLine("3) Exit");
         }
+        //Medium-task5 
+        public static bool IsEven(int number)
+        {
+            return number % 2 == 0;
+        }
 
         static void Main()
         {
@@ -53,6 +58,21 @@
 
             //Easy-task4 
             DisplayMenu();
+            //Medium-task5 
+            Console.Write("Enter a number: ");
+            int task5Num = int.Parse(Console.ReadLine());
+
+            bool evenResult = IsEven(task5Num);
+
+            if (evenResult == true)
+            {
+                Console.WriteLine("Even");
+            }
+            else
+            {
+                Console.WriteLine("Odd");
+            }
+
 
         }
     }
