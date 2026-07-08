@@ -18,6 +18,13 @@
         {
             return (c * 9 / 5) + 32;
         }
+        //Easy-task4
+        public static void DisplayMenu()
+        {
+            Console.WriteLine("1) Start");
+            Console.WriteLine("2) Help");
+            Console.WriteLine("3) Exit");
+        }
 
         static void Main()
         {
@@ -44,6 +51,8 @@
 
             Console.WriteLine("Temperature in Fahrenheit = " + f);
 
+            //Easy-task4 
+            DisplayMenu();
 
         }
     }
