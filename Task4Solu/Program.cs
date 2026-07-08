@@ -64,16 +64,18 @@
                 return "F";
             }
         }
+        //Medium-task8
+        public static void Countdown(int start)
+        {
+            for (int i = start; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
 
-
-
-
-
-
-
-
-
-
+        
+        /// ////////////////////////////////////////////////////////////////
+        
 
         //main method 
         static void Main()
@@ -136,7 +138,12 @@
             string grade = GetGradeLetter(score);
 
             Console.WriteLine("Grade Letter = " + grade);
+            //Medium-task8
+            Console.Write("Enter starting number: ");
+           
+            int start = Convert.ToInt32(Console.ReadLine());
 
+            Countdown(start);
 
 
         }
