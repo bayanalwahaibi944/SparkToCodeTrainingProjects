@@ -40,7 +40,42 @@
         {
             return 2 * (length + width);
         }
+        //Medium-task7
+        public static string GetGradeLetter(int score)
+        {
+            if (score >= 90)
+            {
+                return "A";
+            }
+            else if (score >= 80)
+            {
+                return "B";
+            }
+            else if (score >= 70)
+            {
+                return "C";
+            }
+            else if (score >= 60)
+            {
+                return "D";
+            }
+            else
+            {
+                return "F";
+            }
+        }
 
+
+
+
+
+
+
+
+
+
+
+        //main method 
         static void Main()
         {
             //Easy-task1 
@@ -94,6 +129,13 @@
 
             Console.WriteLine("Area = " + area);
             Console.WriteLine("Perimeter = " + perimeter);
+            //Medium-task7
+            Console.Write("Enter score: ");
+            int score = int.Parse(Console.ReadLine());
+
+            string grade = GetGradeLetter(score);
+
+            Console.WriteLine("Grade Letter = " + grade);
 
 
 
