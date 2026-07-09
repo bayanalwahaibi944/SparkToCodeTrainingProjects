@@ -223,6 +223,11 @@ namespace BankingSystemApp
                 Console.WriteLine("Receiver account not found");
                 return;
             }
+            if (senderIndex == receiverIndex)
+            {
+                Console.WriteLine("You cannot transfer to the same account");
+                return;
+            }
 
             Console.Write("Enter transfer amount: ");
 
