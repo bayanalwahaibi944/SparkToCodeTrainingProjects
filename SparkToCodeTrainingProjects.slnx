@@ -5,4 +5,5 @@
   <Project Path="task2slo/task2slo.csproj" Id="b73881da-0679-4eb1-91cd-e7e5ccad385d" />
   <Project Path="Task3Solu/Task3Solu.csproj" Id="6aee9d90-14bb-4131-8dbc-73d1150b7064" />
   <Project Path="Task4Solu/Task4Solu.csproj" Id="11e6b856-4a1b-4cff-8f43-4a214e9c4b94" />
+  <Project Path="task5Solu/task5Solu.csproj" Id="f7a14533-3951-4a4d-a92d-40da8e07aa4f" />
 </Solution>
