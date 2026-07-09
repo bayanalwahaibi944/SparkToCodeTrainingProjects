@@ -202,7 +202,60 @@ namespace BankingSystemApp
         }
         static void TransferAmount()
         {
-            // TODO: implement this service (see Section 3 requirements)
+            Console.Write("Enter sender account number: ");
+            string senderAccNum = Console.ReadLine();
+
+            int senderIndex = accountNumbers.IndexOf(senderAccNum);
+
+            if (senderIndex == -1)
+            {
+                Console.WriteLine("Sender account not found");
+                return;
+            }
+
+            Console.Write("Enter receiver account number: ");
+            string receiverAccNum = Console.ReadLine();
+
+            int receiverIndex = accountNumbers.IndexOf(receiverAccNum);
+
+            if (receiverIndex == -1)
+            {
+                Console.WriteLine("Receiver account not found");
+                return;
+            }
+
+            Console.Write("Enter transfer amount: ");
+
+            double amount;
+
+            try
+            {
+                amount = double.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid amount");
+                return;
+            }
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Transfer amount must be positive");
+                return;
+            }
+
+            if (amount > balances[senderIndex])
+            {
+                Console.WriteLine("Insufficient balance");
+                return;
+            }
+
+            balances[senderIndex] = balances[senderIndex] - amount;
+            balances[receiverIndex] = balances[receiverIndex] + amount;
+
+            Console.WriteLine("Sender updated balance: " + balances[senderIndex]);
+            Console.WriteLine("Receiver updated balance: " + balances[receiverIndex]);
+
         }
         // TODO: write two more void, no-parameter functions here for
         // your own custom services (option 6 and option 7)
