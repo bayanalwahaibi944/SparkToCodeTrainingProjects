@@ -53,6 +53,22 @@
         
             Console.WriteLine("Removed page: " + removedPage);
             Console.WriteLine("You are now on: " + browserHistory.Peek());
+
+            //Easy-task4 
+
+            Queue<string> customers = new Queue<string>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter customer name: ");
+                string name = Console.ReadLine();
+
+                customers.Enqueue(name);
+            }
+
+            string servedCustomer = customers.Dequeue();
+
+            Console.WriteLine("Served customer: " + servedCustomer);
         }
     }
 }
