@@ -76,11 +76,43 @@ namespace BankingSystemApp
         // for these services - it only shows the menu and calls them.
         static void AddAccount()
         {
-            // TODO: implement this service (see Section 3 requirements)
+            Console.Write("Enter customer name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter account number: ");
+            string accountNum = Console.ReadLine();
+            if (accountNumbers.Contains(accountNum))
+            {
+                Console.WriteLine("This account number already exists");
+                return;
+            }
+            Console.WriteLine("Enter initial deposit amount  ");
+            double initialDep;
+            try
+            {
+                initialDep = double.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid amount");
+                return;
+            }
+            if (initialDep < 0)
+            {
+                Console.WriteLine("Initial deposit cannot be negative");
+                return;
+            }
+            customerNames.Add(name);
+            accountNumbers.Add(accountNum);
+            balances.Add(initialDep);
+            Console.WriteLine("Customer name: " + name);
+            Console.WriteLine("Account number: " + accountNum);
+            Console.WriteLine("Balance: " + initialDep);
+
         }
         static void DepositMoney()
         {
-            // TODO: implement this service (see Section 3 requirements)
+            
+
         }
         static void WithdrawMoney()
         {
