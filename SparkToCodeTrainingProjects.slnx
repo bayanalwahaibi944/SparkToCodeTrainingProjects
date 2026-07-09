@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="CsharpSession1/CsharpSession1.csproj" Id="241ade49-0354-45e4-8734-7160fbe971a8" />
   <Project Path="FirstCsharpProject/FirstCsharpProject.csproj" />
+  <Project Path="miniProject1/miniProject1.csproj" Id="cc22ad41-7642-4557-9e20-3da1709adfad" />
   <Project Path="Task1/Task1.csproj" Id="4541944a-21b6-4fd1-9f56-6d6ba382e48c" />
   <Project Path="task2slo/task2slo.csproj" Id="b73881da-0679-4eb1-91cd-e7e5ccad385d" />
   <Project Path="Task3Solu/Task3Solu.csproj" Id="6aee9d90-14bb-4131-8dbc-73d1150b7064" />
