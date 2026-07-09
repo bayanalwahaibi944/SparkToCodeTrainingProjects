@@ -36,7 +36,23 @@
             {
                 Console.WriteLine("- " + task);
             }
+            //Easy-task3 
 
+            Stack<string> browserHistory = new Stack<string>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter website URL: ");
+                string url = Console.ReadLine();
+
+                browserHistory.Push(url);
+            }
+
+            string removedPage = browserHistory.Pop();
+
+        
+            Console.WriteLine("Removed page: " + removedPage);
+            Console.WriteLine("You are now on: " + browserHistory.Peek());
         }
     }
 }
