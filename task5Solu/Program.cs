@@ -19,6 +19,23 @@
             {
                 Console.WriteLine(grade);
             }
+            //Easy-task2 
+            List<string> tasks = new List<string>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Enter task: ");
+                string task = Console.ReadLine();
+
+                tasks.Add(task);
+            }
+
+            Console.WriteLine("To Do List:");
+
+            foreach (string task in tasks)
+            {
+                Console.WriteLine("- " + task);
+            }
 
         }
     }
