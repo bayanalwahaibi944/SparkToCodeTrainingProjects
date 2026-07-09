@@ -22,7 +22,7 @@ namespace BankingSystemApp
                 Console.WriteLine("4. Show Balance");
                 Console.WriteLine("5. Transfer Amount");
                 Console.WriteLine("6. List All Accounts");
-                Console.WriteLine("7. <your 2nd custom service - choose a name>");
+                Console.WriteLine("7. Close Account");
                 Console.WriteLine("8. Exit");
                 Console.Write("Choose an option: ");
                 int choice;
@@ -57,7 +57,7 @@ namespace BankingSystemApp
                         ListAllAccounts();
                         break;
                     case 7:
-                        // TODO: call your second custom service function here
+                        CloseAccount();
                         break;
                     case 8:
                         exitApp = true;
@@ -279,7 +279,27 @@ namespace BankingSystemApp
             }
 
         }
-        // TODO: write two more void, no-parameter functions here for
-        // your own custom services (option 6 and option 7)
+        static void CloseAccount()
+        {
+            Console.Write("Enter account number to close: ");
+            string accountNum = Console.ReadLine();
+
+            int index = accountNumbers.IndexOf(accountNum);
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found");
+                return;
+            }
+
+            customerNames.RemoveAt(index);
+            accountNumbers.RemoveAt(index);
+            balances.RemoveAt(index);
+            Console.WriteLine("Account closed successfully");
+
+
+        }
+
+       
     }
 }
