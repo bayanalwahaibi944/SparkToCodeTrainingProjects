@@ -150,7 +150,21 @@
             HolderName = "Ali",
             Balance = 63
         };
+        //Two Students 
+        static Student student1 = new Student
+        {
+            Name = "Ali",
+            Address = "Muscat",
+            Grade = 65
+        };
 
+
+        static Student student2 = new Student
+        {
+            Name = "Ahmed",
+            Address = "Muscat",
+            Grade = 70
+        };
         internal class Program
         {
             static void Main(string[] args)
