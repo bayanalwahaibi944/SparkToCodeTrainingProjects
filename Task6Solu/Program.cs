@@ -135,6 +135,22 @@
             }
         }
 
+        //Two Accounts 
+        static BankAccount account1 = new BankAccount
+        {
+            AccountNumber = 1163,
+            HolderName = "karim",
+            Balance = 120
+        };
+
+
+        static BankAccount account2 = new BankAccount
+        {
+            AccountNumber = 15203,
+            HolderName = "Ali",
+            Balance = 63
+        };
+
         internal class Program
         {
             static void Main(string[] args)
