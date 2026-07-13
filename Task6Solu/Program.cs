@@ -158,12 +158,26 @@
             Grade = 65
         };
 
-
         static Student student2 = new Student
         {
             Name = "Ahmed",
             Address = "Muscat",
             Grade = 70
+        };
+        //                                                
+        static Product product1 = new Product
+        {
+            ProductName = "Wireless Mouse",
+            Price = 5.500,
+            StockQuantity = 50
+        };
+
+
+        static Product product2 = new Product
+        {
+            ProductName = "Mechanical Keyboard",
+            Price = 15.750,
+            StockQuantity = 20
         };
         internal class Program
         {
