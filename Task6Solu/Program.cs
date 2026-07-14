@@ -326,6 +326,33 @@
                 Console.WriteLine("Both accounts have equal balances");
             }
         }
+        //Medium-Task8
+        static void Case8RestockProduct()
+        {
+            Product selectedProduct = SelectProduct();
+
+            Console.Write("Enter quantity to add: ");
+
+            int quantity = int.Parse(Console.ReadLine());
+
+            selectedProduct.Restock(quantity);
+
+            Console.WriteLine(
+                $"Updated Stock Quantity: {selectedProduct.StockQuantity}");
+
+            if (selectedProduct.StockQuantity < 10)
+            {
+                Console.WriteLine("Stock Level: Low");
+            }
+            else if (selectedProduct.StockQuantity <= 49)
+            {
+                Console.WriteLine("Stock Level: Moderate");
+            }
+            else
+            {
+                Console.WriteLine("Stock Level: Well Stocked");
+            }
+        }
         static void Main(string[] args)
         {
                 bool exitProgram = false;
@@ -396,6 +423,10 @@
                     //Medium-Task7
                     case 7:
                         Case7CompareAccountBalances();
+                        break;
+                    //Medium-Task8
+                    case 8:
+                        Case8RestockProduct();
                         break;
 
                     case 20:
