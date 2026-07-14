@@ -200,16 +200,51 @@
                 return account2;
             }
         }
+        //Easy-Task2 
+        static Student SelectStudent()
+        {
+            Console.WriteLine("1. Ali");
+            Console.WriteLine("2. Ahmed");
+
+            Console.Write("Choose a student: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                return student1;
+            }
+            else
+            {
+                return student2;
+            }
+        }
+        //Easy-Task1
         static void Case1ViewAccountDetails()
         {
             BankAccount selectedAccount = SelectAccount();
 
             selectedAccount.CheckBalance();
         }
+        //Easy-Task2 
+        static void Case2UpdateStudentAddress()
+        {
+            Student selectedStudent = SelectStudent();
+
+            Console.Write("Enter the new address: ");
+
+            string newAddress = Console.ReadLine();
+
+            selectedStudent.Address = newAddress;
+
+            Console.WriteLine("Address updated successfully.");
+
+            Console.WriteLine($"New Address: {selectedStudent.Address}");
+        }
         //
-       
-            static void Main(string[] args)
-            {
+
+        static void Main(string[] args)
+        {
                 bool exitProgram = false;
 
                 while (!exitProgram)
@@ -250,22 +285,29 @@
 
                     switch (choice)
                     {
-                        //Easy-Task1
-                        case 1:
-                            Case1ViewAccountDetails();
-                            break;
-                        case 20:
-                            exitProgram = true;
+                    //Easy-Task1
+                    case 1:
+                        Case1ViewAccountDetails();
+                        break;
 
-                            Console.WriteLine("Program closed");
+                    //Easy-Task2
+                    case 2:
+                        Case2UpdateStudentAddress();
+                        break;
 
-                            break;
+                    case 20:
+                        exitProgram = true;
 
-                        default:
-                            Console.WriteLine(
-                                "This case has not been added yet");
+                        Console.WriteLine("Program closed");
 
-                            break;
+                        break;
+
+                    default:
+                        Console.WriteLine(
+                            "This case has not been added yet");
+
+                        break;
+                        
                     }
                 }
             }
