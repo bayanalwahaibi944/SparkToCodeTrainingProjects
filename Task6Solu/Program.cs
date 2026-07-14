@@ -310,6 +310,22 @@
 
             Console.WriteLine("Student registered successfully.");
         }
+        //Medium-Task7
+        static void Case7CompareAccountBalances()
+        {
+            if (account1.Balance > account2.Balance)
+            {
+                Console.WriteLine($"{account1.HolderName} has more money");
+            }
+            else if (account2.Balance > account1.Balance)
+            {
+                Console.WriteLine($"{account2.HolderName} has more money");
+            }
+            else
+            {
+                Console.WriteLine("Both accounts have equal balances");
+            }
+        }
         static void Main(string[] args)
         {
                 bool exitProgram = false;
@@ -376,6 +392,10 @@
                     //Medium-Task6
                     case 6:
                         Case6RegisterStudent();
+                        break;
+                    //Medium-Task7
+                    case 7:
+                        Case7CompareAccountBalances();
                         break;
 
                     case 20:
