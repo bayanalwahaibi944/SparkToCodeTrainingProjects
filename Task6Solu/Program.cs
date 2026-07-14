@@ -47,8 +47,9 @@
 
         private void SendEmail()
         {
-            Console.WriteLine("Email notification sent.");
+            Console.WriteLine("Email notification sent ");
         }
+    }
         //Student Class 
         internal class Student
         {
@@ -75,7 +76,7 @@
 
             private void SendEmail()
             {
-                Console.WriteLine("Registration email sent.");
+                Console.WriteLine("Registration email sent ");
             }
         }
         //Product Class 
@@ -134,7 +135,8 @@
                 Console.WriteLine("Transaction logged.");
             }
         }
-
+    internal class Program
+    {
         //Two Accounts 
         static BankAccount account1 = new BankAccount
         {
@@ -179,8 +181,33 @@
             Price = 15.750,
             StockQuantity = 20
         };
-        internal class Program
+        //Easy-Task1 
+        static BankAccount SelectAccount()
         {
+            Console.WriteLine("1. Karim");
+            Console.WriteLine("2. Ali");
+
+            Console.Write("Choose an account: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                return account1;
+            }
+            else
+            {
+                return account2;
+            }
+        }
+        static void Case1ViewAccountDetails()
+        {
+            BankAccount selectedAccount = SelectAccount();
+
+            selectedAccount.CheckBalance();
+        }
+        //
+       
             static void Main(string[] args)
             {
                 bool exitProgram = false;
@@ -223,16 +250,20 @@
 
                     switch (choice)
                     {
+                        //Easy-Task1
+                        case 1:
+                            Case1ViewAccountDetails();
+                            break;
                         case 20:
                             exitProgram = true;
 
-                            Console.WriteLine("Program closed.");
+                            Console.WriteLine("Program closed");
 
                             break;
 
                         default:
                             Console.WriteLine(
-                                "This case has not been added yet.");
+                                "This case has not been added yet");
 
                             break;
                     }
@@ -240,6 +271,6 @@
             }
         }
     }
-}
+
     
 
