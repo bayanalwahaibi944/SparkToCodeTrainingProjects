@@ -256,6 +256,19 @@
 
             Console.WriteLine($"Updated Balance: {selectedAccount.Balance}");
         }
+        //Easy-Task4
+        static void Case4MakeWithdrawal()
+        {
+            BankAccount selectedAccount = SelectAccount();
+
+            Console.Write("Enter withdrawal amount: ");
+
+            double amount = double.Parse(Console.ReadLine());
+
+            selectedAccount.Withdraw(amount);
+
+            Console.WriteLine($"Updated Balance: {selectedAccount.Balance}");
+        }
 
         static void Main(string[] args)
         {
@@ -311,6 +324,10 @@
                     //Easy-Task3
                     case 3:
                         Case3MakeDeposit();
+                        break;
+                    //Easy-Task4
+                    case 4:
+                        Case4MakeWithdrawal();
                         break;
 
                     case 20:
