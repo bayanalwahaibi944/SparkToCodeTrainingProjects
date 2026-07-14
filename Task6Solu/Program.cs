@@ -241,7 +241,21 @@
 
             Console.WriteLine($"New Address: {selectedStudent.Address}");
         }
-        //
+        //Easy-Task3
+        static void Case3MakeDeposit()
+        {
+            BankAccount selectedAccount = SelectAccount();
+
+            Console.Write("Enter deposit amount: ");
+
+            double amount = double.Parse(Console.ReadLine());
+
+            selectedAccount.Deposit(amount);
+
+            Console.WriteLine($"Holder Name: {selectedAccount.HolderName}");
+
+            Console.WriteLine($"Updated Balance: {selectedAccount.Balance}");
+        }
 
         static void Main(string[] args)
         {
@@ -293,6 +307,10 @@
                     //Easy-Task2
                     case 2:
                         Case2UpdateStudentAddress();
+                        break;
+                    //Easy-Task3
+                    case 3:
+                        Case3MakeDeposit();
                         break;
 
                     case 20:
