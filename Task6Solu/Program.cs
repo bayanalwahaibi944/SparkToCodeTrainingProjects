@@ -297,7 +297,19 @@
 
             Console.WriteLine($"Total Inventory Value: {inventoryValue}");
         }
+        //Medium-Task6
+        static void Case6RegisterStudent()
+        {
+            Student selectedStudent = SelectStudent();
 
+            Console.Write("Enter student email: ");
+
+            string email = Console.ReadLine();
+
+            selectedStudent.Register(email);
+
+            Console.WriteLine("Student registered successfully.");
+        }
         static void Main(string[] args)
         {
                 bool exitProgram = false;
@@ -360,6 +372,10 @@
                     //Easy-Task5
                     case 5:
                         Case5ViewProductDetails();
+                        break;
+                    //Medium-Task6
+                    case 6:
+                        Case6RegisterStudent();
                         break;
 
                     case 20:
