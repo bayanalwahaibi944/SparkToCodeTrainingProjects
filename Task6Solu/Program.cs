@@ -269,6 +269,34 @@
 
             Console.WriteLine($"Updated Balance: {selectedAccount.Balance}");
         }
+        //Easy-Task5
+        static Product SelectProduct()
+        {
+            Console.WriteLine("1. Wireless Mouse");
+            Console.WriteLine("2. Mechanical Keyboard");
+
+            Console.Write("Choose a product: ");
+
+            int choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                return product1;
+            }
+            else
+            {
+                return product2;
+            }
+        }
+        //Easy-Task5
+        static void Case5ViewProductDetails()
+        {
+            Product selectedProduct = SelectProduct();
+
+            double inventoryValue = selectedProduct.GetInventoryValue();
+
+            Console.WriteLine($"Total Inventory Value: {inventoryValue}");
+        }
 
         static void Main(string[] args)
         {
@@ -328,6 +356,10 @@
                     //Easy-Task4
                     case 4:
                         Case4MakeWithdrawal();
+                        break;
+                    //Easy-Task5
+                    case 5:
+                        Case5ViewProductDetails();
                         break;
 
                     case 20:
